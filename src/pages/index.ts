@@ -1,0 +1,1 @@
+export { default as NotFoundPages } from "./not-found.pages"
