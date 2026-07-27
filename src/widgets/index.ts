@@ -1,0 +1,1 @@
+export { default as NotFoundWidgets } from "./not-found.widgets"
