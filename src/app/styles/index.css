@@ -4,9 +4,11 @@
 @theme {
     --font-montserrat: "Montserrat", sans-serif;
     --font-fredoka: "Fredoka", sans-serif;
+
+    --breakpoint-xs: 400px;
 }
 
 :root {
-    --bg-dark: #1C1A2E;
-    --bg-foreground: #2F2B4D;
+    --bg-dark: #122638;
+    --bg-foreground: #19354E;
 }
