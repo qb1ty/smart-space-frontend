@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import { AdminLayout, AuthLayout, MainLayout } from "@app/layouts";
 
-import { HomePages, NotFoundPages } from "@/pages";
+import { HomePages, AboutPages, ContactPages, NotFoundPages } from "@/pages";
 import { LoginPages, RegisterPages } from "@/pages/auth";
 
 import { Error } from "@/shared/ui/global";
@@ -15,6 +15,14 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 element: <HomePages />
+            },
+            {
+                path: "about",
+                element: <AboutPages />
+            },
+            {
+                path: "contact",
+                element: <ContactPages />
             }
         ]
     },
