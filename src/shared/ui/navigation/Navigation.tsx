@@ -13,26 +13,26 @@ export default function Navigation() {
             } else {
                 setIsScrolled(false)
             }
-
-            window.addEventListener("scroll", handleScroll)
-
-            return () => window.removeEventListener("scroll", handleScroll)
         }
+
+        window.addEventListener("scroll", handleScroll)
+
+        return () => window.removeEventListener("scroll", handleScroll)
     }, [])
 
     const getNavlinkStyle = ({ isActive }: { isActive: boolean }) =>
-        `text-sm font-montserrat font-medium transition-colors duration-200 hover:text-indigo-400 ${
+        `text-sm font-montserrat font-medium transition-colors duration-200 hover:text-black ${
             isActive
-                ? "text-indigo-400 font-semibold drop-shadow-[0_0_8px_rgba(129,140,248,0.3)]"
-                : "text-slate-300"
+                ? "text-black font-semibold drop-shadow-[0_0_8px_rgba(129,140,248,0.3)]"
+                : "text-neutral-500"
         }`
 
     return (
         <header
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+            className={`w-full z-50 transition-all duration-300 ${
                 isScrolled
-                    ? 'bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80 py-3.5 shadow-2xl shadow-black/40'
-                    : 'bg-transparent border-b border-transparent py-5'
+                    ? 'fixed top-0 left-0 bg-neutral-600/80 backdrop-blur-md border-b border-slate-800/80 py-3.5 shadow-2xl shadow-black/40'
+                    : 'absolute top-0 left-0 bg-transparent border-b border-transparent py-5'
             }`}
         >
             <div className="max-w-[1920px] mx-auto px-4 sm:px-8 md:px-12 xl:px-23.25 flex items-center justify-between">
@@ -63,7 +63,7 @@ export default function Navigation() {
                 <div className="hidden sm:flex items-center gap-3">
                     <Link
                         to="/auth"
-                        className="px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-900/80 transition-all duration-200"
+                        className="px-4 py-4 rounded-xl text-sm font-semibold text-(--color-primary) hover:text-white hover:bg-(--color-primary) hover:-translate-y-1 transition-all duration-200"
                     >
                         <span className="font-montserrat">
                             Sign In
@@ -71,7 +71,7 @@ export default function Navigation() {
                     </Link>
                     <Link
                         to="/auth/register"
-                        className="px-5 py-2 rounded-xl text-sm font-semibold text-white bg-blue-900 hover:bg-blue-700 transition-all duration-200 active:scale-95"
+                        className="px-5 py-4 rounded-xl text-sm font-semibold text-(--color-primary) hover:text-white hover:bg-(--color-primary) hover:-translate-y-1 transition-all duration-200 active:scale-95"
                     >
                         <span className="font-montserrat">
                             Sign Up
