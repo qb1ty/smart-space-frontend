@@ -9,6 +9,6 @@
 }
 
 :root {
-    --bg-dark: #122638;
-    --bg-foreground: #19354E;
+    --bg-color: #F5F7FA;
+    --color-primary: #4CAF4F;
 }
