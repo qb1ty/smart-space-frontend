@@ -9,7 +9,7 @@ export default function Error() {
     }, [error])
 
     return (
-        <div className="flex min-h-screen w-full flex-col items-center justify-center bg-(--bg-dark) px-23.25">
+        <div className="flex min-h-screen w-full flex-col items-center justify-center bg-(--bg-color) px-23.25">
             
         </div>
     )
